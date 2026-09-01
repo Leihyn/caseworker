@@ -13,6 +13,8 @@ evidence, finds the contradictions, proposes one bounded action, pauses for
 your approval, and keeps working in the background — waking on replies and
 deadlines — until the dispute is verifiably resolved.
 
+![Caseworker architecture](docs/architecture.svg)
+
 ## How it uses Strands
 
 - **Agents-as-tools**: a Caseworker orchestrator delegates to six specialists
@@ -32,8 +34,12 @@ Full design: [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 ## Status
 
-Early port scaffold — agent topology, approval contract, and session runtime
-are in place; case repository, wake events, API, and deployment land next.
+Agent topology, approval contract, session runtime, case repository
+(in-memory + DynamoDB), idempotent wake events, and the HTTP API are in place
+and tested (`uv run --extra dev pytest`). The React case file runs against the
+API, and falls back to a deterministic local fixture when no backend is
+reachable. The AgentCore entrypoint and deploy script are in place; the cloud
+launch and the demo video land next.
 
 ## Run locally
 
@@ -46,6 +52,25 @@ uv run --extra dev uvicorn app.api:api --reload --port 8000
 cd frontend
 npm install && npm run dev
 ```
+
+The React case file talks to the API when it is reachable and falls back to a
+deterministic local fixture when it is not, so the full demo path always runs.
+
+## Deploy to Amazon Bedrock AgentCore
+
+`backend/agentcore_app.py` wraps the same agent runtime in the AgentCore
+contract (`POST /invocations` routed by `action`: `analyze`, `turn`,
+`approve`, `get_case`, `reset_demo`). With AWS credentials and Docker/Finch
+available:
+
+```bash
+./scripts/deploy_agentcore.sh us-east-1
+```
+
+For durable cloud state, set `CASEWORKER_REPOSITORY=dynamodb`,
+`CASEWORKER_TABLE`, and `CASEWORKER_SESSIONS_BUCKET` on the runtime — case
+records land in DynamoDB and paused agent sessions in S3, so an approval can
+arrive days after the interrupt that requested it.
 
 ## Prior-work disclosure
 

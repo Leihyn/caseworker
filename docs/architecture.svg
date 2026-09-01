@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="770" viewBox="0 0 1180 770" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <rect width="1180" height="770" fill="#f8fafc"/>
+  <text x="40" y="38" font-size="20" font-weight="700" fill="#0f172a">Caseworker — evidence-first dispute agent on Strands</text>
+
+  <!-- User -->
+  <rect x="40" y="70" width="150" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="115" y="97" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">Maya (user)</text>
+  <text x="115" y="116" font-size="11" fill="#64748b" text-anchor="middle">approves, nothing more</text>
+
+  <!-- React case file -->
+  <rect x="240" y="70" width="180" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="330" y="97" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">React case file</text>
+  <text x="330" y="116" font-size="11" fill="#64748b" text-anchor="middle">evidence · approval · audit</text>
+
+  <!-- API layer -->
+  <rect x="470" y="48" width="240" height="50" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="590" y="69" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">FastAPI</text>
+  <text x="590" y="86" font-size="11" fill="#64748b" text-anchor="middle">local judge path — no AWS needed</text>
+
+  <rect x="470" y="108" width="240" height="50" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="590" y="129" font-size="13" font-weight="600" fill="#7c2d12" text-anchor="middle">AgentCore Runtime</text>
+  <text x="590" y="146" font-size="11" fill="#9a3412" text-anchor="middle">Amazon Bedrock AgentCore — cloud</text>
+
+  <!-- Orchestrator -->
+  <rect x="790" y="60" width="350" height="86" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="965" y="90" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">Caseworker orchestrator</text>
+  <text x="965" y="110" font-size="11.5" fill="#1e40af" text-anchor="middle">Strands Agent · Claude Sonnet on Amazon Bedrock</text>
+  <text x="965" y="127" font-size="11.5" fill="#1e40af" text-anchor="middle">reads the case record, delegates, proposes ONE action</text>
+
+  <!-- top arrows -->
+  <line x1="190" y1="102" x2="234" y2="102" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="88" x2="464" y2="76" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="116" x2="464" y2="128" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="710" y1="73" x2="784" y2="90" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="710" y1="133" x2="784" y2="116" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- agents-as-tools connector -->
+  <line x1="965" y1="146" x2="965" y2="196" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="130" y1="196" x2="965" y2="196" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="548" y="188" font-size="12" font-weight="600" fill="#1d4ed8" text-anchor="middle">agents-as-tools — each specialist is a Strands Agent exposed via .as_tool()</text>
+  <line x1="130" y1="196" x2="130" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="297" y1="196" x2="297" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="464" y1="196" x2="464" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="631" y1="196" x2="631" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="798" y1="196" x2="798" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="965" y1="196" x2="965" y2="224" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- specialists -->
+  <g>
+    <rect x="53" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="130" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">intake</text>
+    <text x="130" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">evidence → structured</text>
+    <text x="130" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">facts with IDs</text>
+
+    <rect x="220" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="297" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">reconstruction</text>
+    <text x="297" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">case graph: actors,</text>
+    <text x="297" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">claims, contradictions</text>
+
+    <rect x="387" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="464" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">verifier</text>
+    <text x="464" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">rejects claims without</text>
+    <text x="464" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">an evidence ID</text>
+
+    <rect x="554" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="631" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">strategy</text>
+    <text x="631" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">one bounded, lowest-</text>
+    <text x="631" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">risk next action</text>
+
+    <rect x="721" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="798" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">correspondence</text>
+    <text x="798" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">drafts the exact</text>
+    <text x="798" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">outbound message</text>
+
+    <rect x="888" y="228" width="154" height="72" rx="10" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="965" y="255" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">response evaluator</text>
+    <text x="965" y="273" font-size="10.5" fill="#64748b" text-anchor="middle">resolved · escalate ·</text>
+    <text x="965" y="287" font-size="10.5" fill="#64748b" text-anchor="middle">needs evidence</text>
+  </g>
+
+  <!-- approval gate -->
+  <text x="40" y="352" font-size="14" font-weight="700" fill="#92400e">The approval gate — the only tool with an external effect</text>
+
+  <rect x="40" y="368" width="230" height="76" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="155" y="395" font-size="13" font-weight="600" fill="#78350f" text-anchor="middle">send_external_message</text>
+  <text x="155" y="413" font-size="10.5" fill="#92400e" text-anchor="middle">raises a Strands interrupt with</text>
+  <text x="155" y="427" font-size="10.5" fill="#92400e" text-anchor="middle">the payload + SHA-256 hash</text>
+
+  <line x1="270" y1="406" x2="322" y2="406" stroke="#b45309" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+  <text x="296" y="396" font-size="10" fill="#92400e" text-anchor="middle">pauses</text>
+
+  <rect x="328" y="368" width="230" height="76" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="443" y="395" font-size="13" font-weight="600" fill="#78350f" text-anchor="middle">stop_reason == "interrupt"</text>
+  <text x="443" y="413" font-size="10.5" fill="#92400e" text-anchor="middle">loop stops; paused agent persisted</text>
+  <text x="443" y="427" font-size="10.5" fill="#92400e" text-anchor="middle">by the session manager</text>
+
+  <line x1="558" y1="406" x2="610" y2="406" stroke="#b45309" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+
+  <rect x="616" y="368" width="230" height="76" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="731" y="395" font-size="13" font-weight="600" fill="#7f1d1d" text-anchor="middle">human approval</text>
+  <text x="731" y="413" font-size="10.5" fill="#991b1b" text-anchor="middle">response must echo the exact hash;</text>
+  <text x="731" y="427" font-size="10.5" fill="#991b1b" text-anchor="middle">any edit ⇒ new hash ⇒ new interrupt</text>
+
+  <line x1="846" y1="406" x2="898" y2="406" stroke="#b45309" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+  <text x="872" y="396" font-size="10" fill="#92400e" text-anchor="middle">resumes</text>
+
+  <rect x="904" y="368" width="236" height="76" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1022" y="395" font-size="13" font-weight="600" fill="#14532d" text-anchor="middle">message sent · checkpoint</text>
+  <text x="1022" y="413" font-size="10.5" fill="#166534" text-anchor="middle">deadline scheduled; case goes</text>
+  <text x="1022" y="427" font-size="10.5" fill="#166534" text-anchor="middle">dormant until a wake event</text>
+
+  <!-- wake loop -->
+  <path d="M 1022 444 L 1022 490" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="494" width="1100" height="88" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="60" y="522" font-size="14" font-weight="700" fill="#0f172a">Background loop — the agent works while Maya lives her life</text>
+  <text x="60" y="544" font-size="12" fill="#334155">Wake events (idempotent, recorded before any transition): an inbound reply via the HTTPS event endpoint, or an EventBridge deadline firing.</text>
+  <text x="60" y="564" font-size="12" fill="#334155">The session manager restores the paused agent; the response evaluator judges the reply → verified resolution, or a new escalation interrupt.</text>
+
+  <path d="M 1140 520 C 1172 480, 1176 240, 1146 152" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <text x="1152" y="322" font-size="11" fill="#475569" text-anchor="end">wake resumes</text>
+  <text x="1152" y="336" font-size="11" fill="#475569" text-anchor="end">the dormant case</text>
+
+  <path d="M 798 306 L 798 322 L 22 322 L 22 406 L 34 406" stroke="#b45309" stroke-width="1.2" fill="none" stroke-dasharray="4 4" marker-end="url(#arrowAmber)"/>
+  <text x="410" y="316" font-size="10.5" fill="#92400e" text-anchor="middle">the verified draft feeds the send tool</text>
+
+  <!-- persistence row -->
+  <text x="40" y="622" font-size="14" font-weight="700" fill="#7c2d12">AWS persistence &amp; runtime</text>
+
+  <rect x="40" y="636" width="256" height="80" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="168" y="663" font-size="13" font-weight="600" fill="#7c2d12" text-anchor="middle">Agent sessions</text>
+  <text x="168" y="681" font-size="10.5" fill="#9a3412" text-anchor="middle">S3SessionManager (cloud)</text>
+  <text x="168" y="695" font-size="10.5" fill="#9a3412" text-anchor="middle">FileSessionManager (local)</text>
+
+  <rect x="321" y="636" width="256" height="80" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="449" y="663" font-size="13" font-weight="600" fill="#7c2d12" text-anchor="middle">Case records</text>
+  <text x="449" y="681" font-size="10.5" fill="#9a3412" text-anchor="middle">DynamoDB, revisioned (cloud)</text>
+  <text x="449" y="695" font-size="10.5" fill="#9a3412" text-anchor="middle">in-memory (local judge path)</text>
+
+  <rect x="602" y="636" width="256" height="80" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="730" y="663" font-size="13" font-weight="600" fill="#7c2d12" text-anchor="middle">Wake events</text>
+  <text x="730" y="681" font-size="10.5" fill="#9a3412" text-anchor="middle">EventBridge deadline schedules</text>
+  <text x="730" y="695" font-size="10.5" fill="#9a3412" text-anchor="middle">HTTPS endpoint for replies</text>
+
+  <rect x="883" y="636" width="257" height="80" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="1011" y="663" font-size="13" font-weight="600" fill="#7c2d12" text-anchor="middle">Model</text>
+  <text x="1011" y="681" font-size="10.5" fill="#9a3412" text-anchor="middle">Claude Sonnet on Amazon Bedrock</text>
+  <text x="1011" y="695" font-size="10.5" fill="#9a3412" text-anchor="middle">via Strands BedrockModel</text>
+
+  <text x="40" y="750" font-size="11" fill="#64748b">Local mode mirrors cloud mode exactly — FileSessionManager + in-memory repository — so the full judge path runs without AWS credentials.</text>
+</svg>

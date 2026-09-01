@@ -1,5 +1,7 @@
 # Caseworker on Strands — Port Architecture
 
+![Caseworker architecture](docs/architecture.svg)
+
 ## The Problem
 
 A consumer dispute dies in the gap between companies. The merchant points to
