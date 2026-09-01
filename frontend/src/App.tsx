@@ -73,7 +73,7 @@ export default function App() {
   const verifyWithAgent = async () => {
     setVerifying(true); setError(null)
     try { setAgentAnalysis(await caseApi.analyze()) }
-    catch (cause) { setError(cause instanceof Error ? cause.message : 'The live Gemini verification failed.') }
+    catch (cause) { setError(cause instanceof Error ? cause.message : 'The live Strands verification failed.') }
     finally { setVerifying(false) }
   }
 

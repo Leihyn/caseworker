@@ -62,7 +62,7 @@ const localDenial = () => {
   next.status = 'escalation_ready'
   next.deadlines = []
   next.current_action = { id: 'ACT-02', action_type: 'escalate', status: 'approval_required', target_actor_id: 'A-PAYMENT', target_name: 'Card provider', reason: 'The merchant repeated the delivered scan without addressing the conflicting address evidence or opening the investigation only it can initiate.', subject: 'Goods not received — order NS-88214', draft_body: 'I am disputing the $184.20 Northstar Market transaction for goods not received. The order address is number 18 [EV-01], while the courier proof shows number 16 [EV-02]. The courier says Northstar must open the investigation [EV-04], but Northstar declined and redirected me to the courier [MSG-05].', evidence_ids: ['EV-01', 'EV-02', 'EV-03', 'EV-04', 'MSG-05'], payload_hash: 'sha256:demo-act-02' }
-  next.audit.push({ id: `AUD-${next.audit.length + 1}`, agent: 'response_agent', summary: 'Pub/Sub wake resumed the dormant case; the reply did not address the material contradiction.', at: now() })
+  next.audit.push({ id: `AUD-${next.audit.length + 1}`, agent: 'response_agent', summary: 'A wake event resumed the dormant case; the reply did not address the material contradiction.', at: now() })
   next.revision += 1
   return saveLocal(next)
 }

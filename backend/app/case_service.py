@@ -153,7 +153,7 @@ class CaseService:
                 {
                     "id": f"AUD-{len(case['audit']) + 1:02d}",
                     "agent": "response_agent",
-                    "summary": "Pub/Sub wake resumed the dormant case and classified the merchant reply as a denial that does not address the material contradiction.",
+                    "summary": "A wake event resumed the dormant case and classified the merchant reply as a denial that does not address the material contradiction.",
                     "at": now_iso(),
                 },
                 {

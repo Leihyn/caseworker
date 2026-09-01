@@ -12,7 +12,7 @@ function EvidenceItem({ item, active, onSelect }: { item: Evidence; active: bool
 }
 
 function DeliveryPhotoPreview() {
-  return <span className="evidence-preview" role="img" aria-label="Courier photograph showing a blue metal door numbered 16"><span className="photo-sky" /><span className="photo-wall"><span className="photo-door"><b>16</b><i /></span></span><span className="vision-caption"><strong>Gemini visual extraction</strong>Door number 16 detected · 0.97 confidence</span></span>
+  return <span className="evidence-preview" role="img" aria-label="Courier photograph showing a blue metal door numbered 16"><span className="photo-sky" /><span className="photo-wall"><span className="photo-door"><b>16</b><i /></span></span><span className="vision-caption"><strong>Intake visual extraction</strong>Door number 16 detected · 0.97 confidence</span></span>
 }
 
 export function CorrespondencePane({ record, view, selectedEvidence, onSelectEvidence }: { record: CaseRecord; view: WorkspaceView; selectedEvidence: string; onSelectEvidence: (id: string) => void }) {
