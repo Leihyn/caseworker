@@ -57,9 +57,10 @@ before the companies run out of redirects.
   specialist invocation into the case record, so the case file shows which
   agent did what.
 - **AWS runtime.** Claude Sonnet on Amazon Bedrock via Strands
-  `BedrockModel`; deployed to **Amazon Bedrock AgentCore Runtime** (Direct
-  Code Deploy); case records in DynamoDB (revisioned); wake events via
-  EventBridge deadline schedules plus an HTTPS endpoint for replies.
+  `BedrockModel`; an **Amazon Bedrock AgentCore Runtime** entrypoint and
+  one-command deploy script (Direct Code Deploy) ship in the repo; case
+  records in DynamoDB (revisioned); wake events via EventBridge deadline
+  schedules plus an HTTPS endpoint for replies.
 
 The deterministic state machine (approval binding, hash verification, wake
 idempotency) is enforced in plain Python with 10 passing tests, so the safety
