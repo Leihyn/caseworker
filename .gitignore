@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+.sessions/
+backend/.venv/
+backend/**/__pycache__/
+*.pyc
+*.tsbuildinfo
